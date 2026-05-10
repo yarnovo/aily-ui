@@ -16,18 +16,6 @@
 [submodule "components/bottom-nav"]
 	path = components/bottom-nav
 	url = git@github.com:yarnovo/aily-ui-bottom-nav.git
-[submodule "components/agent-switcher"]
-	path = components/agent-switcher
-	url = git@github.com:yarnovo/aily-ui-agent-switcher.git
-[submodule "components/service-card"]
-	path = components/service-card
-	url = git@github.com:yarnovo/aily-ui-service-card.git
-[submodule "components/top-tabs"]
-	path = components/top-tabs
-	url = git@github.com:yarnovo/aily-ui-top-tabs.git
-[submodule "components/note-card"]
-	path = components/note-card
-	url = git@github.com:yarnovo/aily-ui-note-card.git
 [submodule "components/lazy-image"]
 	path = components/lazy-image
 	url = git@github.com:yarnovo/aily-ui-lazy-image.git
