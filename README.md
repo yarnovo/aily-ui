@@ -37,9 +37,11 @@ aily-ui/
 │   ├── lazy-image/   skeleton/
 │   ├── auth-login/              手机号 + OTP 登录组件
 │   └── employee-card/           agent 员工求职简历卡片 (interviewer 真挑选)
-└── chat/                        chat 系列组件 (5 个嵌套 submodule)
-    ├── chat-bubble/   chat-input/   chat-layout/
-    ├── conversation-item/   typing-indicator/
+├── chat/                        chat 系列组件 (5 个嵌套 submodule)
+│   ├── chat-bubble/   chat-input/   chat-layout/
+│   ├── conversation-item/   typing-indicator/
+└── apps/                        复合 web app · 砍 N agent 仓 hand-roll 重复
+    └── chat/                    chat-app · OTP 登录 + AuthGuard + ChatRoom 一体化
 ```
 
 clone 一行真递归：
@@ -78,6 +80,14 @@ git clone --recurse-submodules git@github.com:yarnovo/aily-ui.git
 | ChatLayout | [aily-ui-chat-layout](https://github.com/yarnovo/aily-ui-chat-layout) | [demo](https://yarnovo.github.io/aily-ui-chat-layout/) |
 | ConversationItem | [aily-ui-conversation-item](https://github.com/yarnovo/aily-ui-conversation-item) | [demo](https://yarnovo.github.io/aily-ui-conversation-item/) |
 | TypingIndicator | [aily-ui-typing-indicator](https://github.com/yarnovo/aily-ui-typing-indicator) | [demo](https://yarnovo.github.io/aily-ui-typing-indicator/) |
+
+### apps/ (复合 web app · 老板 5-10 拍)
+
+| 名 | 仓 | demo |
+|---|---|---|
+| ChatApp | [aily-ui-chat-app](https://github.com/yarnovo/aily-ui-chat-app) | [demo](https://yarnovo.github.io/aily-ui-chat-app/) |
+
+ChatApp = OTP 手机号登录 + AuthGuard + ChatRoom 一体化 · 给所有 agent (xiaoxi / interviewer / 后续) 5 行 import 用 · 砍 ~500 行 hand-roll 重复.
 
 ## 单组件接入
 

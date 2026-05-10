@@ -52,3 +52,6 @@
 [submodule "chat/typing-indicator"]
 	path = chat/typing-indicator
 	url = git@github.com:yarnovo/aily-ui-typing-indicator.git
+[submodule "apps/chat"]
+	path = apps/chat
+	url = git@github.com:yarnovo/aily-ui-chat-app.git
