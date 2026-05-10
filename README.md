@@ -28,14 +28,15 @@ import { Button } from '@aily-ui/core'
 
 ```
 aily-ui/
-├── components/                  13 个 UI 组件 (各自独立 GitHub 仓 · 嵌套 submodule)
+├── components/                  14 个 UI 组件 (各自独立 GitHub 仓 · 嵌套 submodule)
 │   ├── tokens/                  设计 tokens · CSS variables + JS object
 │   ├── icons/                   封装 lucide-react · antd 风 props
 │   ├── core/                    聚合包 · 类 antd 一行 import 全套
 │   ├── button/   avatar/   bottom-nav/   agent-switcher/
 │   ├── service-card/   top-tabs/   note-card/
 │   ├── lazy-image/   skeleton/
-│   └── auth-login/              手机号 + OTP 登录组件
+│   ├── auth-login/              手机号 + OTP 登录组件
+│   └── employee-card/           agent 员工求职简历卡片 (interviewer 真挑选)
 └── chat/                        chat 系列组件 (5 个嵌套 submodule)
     ├── chat-bubble/   chat-input/   chat-layout/
     ├── conversation-item/   typing-indicator/
@@ -47,9 +48,9 @@ clone 一行真递归：
 git clone --recurse-submodules git@github.com:yarnovo/aily-ui.git
 ```
 
-## 18 组件清单
+## 19 组件清单
 
-### components/ (13 个)
+### components/ (14 个)
 
 | 名 | 仓 | demo |
 |---|---|---|
@@ -66,6 +67,7 @@ git clone --recurse-submodules git@github.com:yarnovo/aily-ui.git
 | LazyImage | [aily-ui-lazy-image](https://github.com/yarnovo/aily-ui-lazy-image) | [demo](https://yarnovo.github.io/aily-ui-lazy-image/) |
 | Skeleton | [aily-ui-skeleton](https://github.com/yarnovo/aily-ui-skeleton) | [demo](https://yarnovo.github.io/aily-ui-skeleton/) |
 | AuthLogin | [aily-ui-auth-login](https://github.com/yarnovo/aily-ui-auth-login) | [demo](https://yarnovo.github.io/aily-ui-auth-login/) |
+| EmployeeCard | [aily-ui-employee-card](https://github.com/yarnovo/aily-ui-employee-card) | [demo](https://yarnovo.github.io/aily-ui-employee-card/) |
 
 ### chat/ (5 个)
 
