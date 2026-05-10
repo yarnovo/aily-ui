@@ -9,11 +9,11 @@ npm i github:yarnovo/aily-ui-core
 ```
 
 ```tsx
-import { Button, NoteCard, ChatBubble } from '@aily-ui/core'
+import { Button, BottomNav, ChatBubble, LoginFlow } from '@aily-ui/core'
 import '@aily-ui/core/style.css'
 
 <Button variant="primary">下单</Button>
-<NoteCard ... />
+<BottomNav items={[...]} />
 <ChatBubble ... />
 ```
 
@@ -28,15 +28,13 @@ import { Button } from '@aily-ui/core'
 
 ```
 aily-ui/
-├── components/                  14 个 UI 组件 (各自独立 GitHub 仓 · 嵌套 submodule)
+├── components/                  9 个 UI 组件 (各自独立 GitHub 仓 · 嵌套 submodule)
 │   ├── tokens/                  设计 tokens · CSS variables + JS object
 │   ├── icons/                   封装 lucide-react · antd 风 props
 │   ├── core/                    聚合包 · 类 antd 一行 import 全套
-│   ├── button/   avatar/   bottom-nav/   agent-switcher/
-│   ├── service-card/   top-tabs/   note-card/
+│   ├── button/   avatar/   bottom-nav/
 │   ├── lazy-image/   skeleton/
-│   ├── auth-login/              手机号 + OTP 登录组件
-│   └── employee-card/           agent 员工求职简历卡片 (interviewer 真挑选)
+│   └── auth-login/              6 provider 登录流 (phone-sms / email / username / google / wechat / qq)
 └── chat/                        chat 系列组件 (5 个嵌套 submodule)
     ├── chat-bubble/   chat-input/   chat-layout/
     └── conversation-item/   typing-indicator/
@@ -48,9 +46,9 @@ clone 一行真递归：
 git clone --recurse-submodules git@github.com:yarnovo/aily-ui.git
 ```
 
-## 19 组件清单
+## 14 组件清单
 
-### components/ (14 个)
+### components/ (9 个)
 
 | 名 | 仓 | demo |
 |---|---|---|
@@ -60,14 +58,9 @@ git clone --recurse-submodules git@github.com:yarnovo/aily-ui.git
 | Button | [aily-ui-button](https://github.com/yarnovo/aily-ui-button) | [demo](https://yarnovo.github.io/aily-ui-button/) |
 | Avatar | [aily-ui-avatar](https://github.com/yarnovo/aily-ui-avatar) | [demo](https://yarnovo.github.io/aily-ui-avatar/) |
 | BottomNav | [aily-ui-bottom-nav](https://github.com/yarnovo/aily-ui-bottom-nav) | [demo](https://yarnovo.github.io/aily-ui-bottom-nav/) |
-| AgentSwitcher | [aily-ui-agent-switcher](https://github.com/yarnovo/aily-ui-agent-switcher) | [demo](https://yarnovo.github.io/aily-ui-agent-switcher/) |
-| ServiceCard | [aily-ui-service-card](https://github.com/yarnovo/aily-ui-service-card) | [demo](https://yarnovo.github.io/aily-ui-service-card/) |
-| TopTabs | [aily-ui-top-tabs](https://github.com/yarnovo/aily-ui-top-tabs) | [demo](https://yarnovo.github.io/aily-ui-top-tabs/) |
-| NoteCard | [aily-ui-note-card](https://github.com/yarnovo/aily-ui-note-card) | [demo](https://yarnovo.github.io/aily-ui-note-card/) |
 | LazyImage | [aily-ui-lazy-image](https://github.com/yarnovo/aily-ui-lazy-image) | [demo](https://yarnovo.github.io/aily-ui-lazy-image/) |
 | Skeleton | [aily-ui-skeleton](https://github.com/yarnovo/aily-ui-skeleton) | [demo](https://yarnovo.github.io/aily-ui-skeleton/) |
-| AuthLogin | [aily-ui-auth-login](https://github.com/yarnovo/aily-ui-auth-login) | [demo](https://yarnovo.github.io/aily-ui-auth-login/) |
-| EmployeeCard | [aily-ui-employee-card](https://github.com/yarnovo/aily-ui-employee-card) | [demo](https://yarnovo.github.io/aily-ui-employee-card/) |
+| AuthLogin | [aily-ui-auth-login](https://github.com/yarnovo/aily-ui-auth-login) | [demo](https://yarnovo.github.io/aily-ui-auth-login/) · 6 provider |
 
 ### chat/ (5 个)
 
@@ -104,4 +97,13 @@ RN 用 `useColorScheme()` hook · 组件内部自动切 `tokens.light` ↔ `toke
 - 主色: shadcn neutral 黑系 (zinc-900) · 不再 rose
 - 域名规约: aily-ui-*
 - 必 public (UI 组件库都公开)
-- 嵌套套布局 · ~/.claude 主仓只 own 1 entry (repos/ui → yarnovo/aily-ui) · aily-ui 仓 own 18 嵌套 submodule
+- 嵌套套布局 · ~/.claude 主仓只 own 1 entry (repos/ui → yarnovo/aily-ui) · aily-ui 仓 own 14 嵌套 submodule
+
+## 2026-05-11 砍 cast 平台残
+
+- agent-switcher (旧 @akong/ 命名空间)
+- service-card (C2A2C 市集页)
+- note-card (小红书瀑布流)
+- top-tabs (新蓝图无 top tab 形态)
+
+4 仓 GitHub archive 留 git history · 后续如需重启走新蓝图新 REQ。
