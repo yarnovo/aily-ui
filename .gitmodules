@@ -1,0 +1,54 @@
+[submodule "components/tokens"]
+	path = components/tokens
+	url = git@github.com:yarnovo/aily-ui-tokens.git
+[submodule "components/icons"]
+	path = components/icons
+	url = git@github.com:yarnovo/aily-ui-icons.git
+[submodule "components/core"]
+	path = components/core
+	url = git@github.com:yarnovo/aily-ui-core.git
+[submodule "components/button"]
+	path = components/button
+	url = git@github.com:yarnovo/aily-ui-button.git
+[submodule "components/avatar"]
+	path = components/avatar
+	url = git@github.com:yarnovo/aily-ui-avatar.git
+[submodule "components/bottom-nav"]
+	path = components/bottom-nav
+	url = git@github.com:yarnovo/aily-ui-bottom-nav.git
+[submodule "components/agent-switcher"]
+	path = components/agent-switcher
+	url = git@github.com:yarnovo/aily-ui-agent-switcher.git
+[submodule "components/service-card"]
+	path = components/service-card
+	url = git@github.com:yarnovo/aily-ui-service-card.git
+[submodule "components/top-tabs"]
+	path = components/top-tabs
+	url = git@github.com:yarnovo/aily-ui-top-tabs.git
+[submodule "components/note-card"]
+	path = components/note-card
+	url = git@github.com:yarnovo/aily-ui-note-card.git
+[submodule "components/lazy-image"]
+	path = components/lazy-image
+	url = git@github.com:yarnovo/aily-ui-lazy-image.git
+[submodule "components/skeleton"]
+	path = components/skeleton
+	url = git@github.com:yarnovo/aily-ui-skeleton.git
+[submodule "components/auth-login"]
+	path = components/auth-login
+	url = git@github.com:yarnovo/aily-ui-auth-login.git
+[submodule "chat/chat-bubble"]
+	path = chat/chat-bubble
+	url = git@github.com:yarnovo/aily-ui-chat-bubble.git
+[submodule "chat/chat-input"]
+	path = chat/chat-input
+	url = git@github.com:yarnovo/aily-ui-chat-input.git
+[submodule "chat/chat-layout"]
+	path = chat/chat-layout
+	url = git@github.com:yarnovo/aily-ui-chat-layout.git
+[submodule "chat/conversation-item"]
+	path = chat/conversation-item
+	url = git@github.com:yarnovo/aily-ui-conversation-item.git
+[submodule "chat/typing-indicator"]
+	path = chat/typing-indicator
+	url = git@github.com:yarnovo/aily-ui-typing-indicator.git
