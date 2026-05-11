@@ -1,6 +1,54 @@
 # aily-ui · 阿空设计系统
 
 跨端 (Web + React Native) · 一组件一仓 · 类 antd / shadcn 风。
+本仓 = pnpm workspace monorepo · 同时 own 14 个组件 submodule + `apps/*` 内 app (聊天 app 跟 Hermes Agent 联动)。
+
+## monorepo 跑起来
+
+```bash
+git clone --recurse-submodules git@github.com:yarnovo/aily-ui.git
+cd aily-ui
+pnpm install
+pnpm dev   # 起 apps/chat (Vite · http://localhost:5173/)
+```
+
+workspace 范围 (见 `pnpm-workspace.yaml`):
+
+- `apps/*`        — 内部 app (不发 npm) · 当前: `apps/chat`
+- `components/*`  — 9 个 UI 组件 (各自独立 GitHub 仓 · submodule)
+- `chat/*`        — 5 个 chat 组件 (各自独立 GitHub 仓 · submodule)
+
+app 内 `workspace:*` 引用 chat/components · 改组件源代码即时热更。
+
+## apps/chat 用法 · 跟 Hermes Agent 联动
+
+`apps/chat` 是 React + Vite + TypeScript 聊天 app · 用 aily-ui 的 chat 组件 (chat-bubble · chat-input · chat-layout · conversation-item · typing-indicator) · 通过 OpenAI 兼容 HTTP 流式接 [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)。
+
+启:
+
+```bash
+# 1. 先在本机起 hermes (另一窗口)
+#    默认监听 http://localhost:8642
+#
+# 2. 起 chat app
+pnpm --filter @aily-ui/chat-app dev   # http://localhost:5173/
+```
+
+配 hermes baseUrl · 复制 env:
+
+```bash
+cp apps/chat/.env.example apps/chat/.env.local
+# 编辑 apps/chat/.env.local
+# VITE_HERMES_URL=http://localhost:8642/v1
+```
+
+| env | 作用 | default |
+|---|---|---|
+| `VITE_HERMES_URL` | OpenAI 兼容 baseUrl · 必含 `/v1` 后缀 | `http://localhost:8642/v1` |
+| `VITE_HERMES_MODEL` | 模型名 | `hermes` |
+| `VITE_HERMES_API_KEY` | hermes 无 auth · 占位字符串 | `hermes-local` |
+
+详见 `apps/chat/README.md`。
 
 ## 一行接入
 
