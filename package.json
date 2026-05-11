@@ -1,0 +1,17 @@
+{
+  "name": "aily-ui",
+  "version": "0.1.0",
+  "private": true,
+  "description": "aily-ui · 阿空设计系统 monorepo · pnpm workspace · 14 components (submodule) + apps/*",
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --filter @aily-ui/chat-app dev",
+    "build": "pnpm --filter @aily-ui/chat-app build",
+    "chat:dev": "pnpm --filter @aily-ui/chat-app dev",
+    "chat:build": "pnpm --filter @aily-ui/chat-app build"
+  },
+  "packageManager": "pnpm@10.0.0",
+  "engines": {
+    "node": ">=20"
+  }
+}

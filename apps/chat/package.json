@@ -1,0 +1,31 @@
+{
+  "name": "@aily-ui/chat-app",
+  "version": "0.1.0",
+  "private": true,
+  "description": "aily-ui apps/chat · React + Vite 聊天 app · 接 Hermes Agent OpenAI 兼容后端",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@aily-ui/chat-bubble": "workspace:*",
+    "@aily-ui/chat-input": "workspace:*",
+    "@aily-ui/chat-layout": "workspace:*",
+    "@aily-ui/conversation-item": "workspace:*",
+    "@aily-ui/typing-indicator": "workspace:*",
+    "@aily-ui/tokens": "workspace:*",
+    "openai": "^6.37.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.3",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.11"
+  }
+}
